@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        
+        :root {
+            --bg-color: white;
+            --text-color: black;
+            --card-bg: #f0f0f0;
+            --btn-bg: #007bff;
+            --btn-text: white;
+        }
+
+        body:has(#dark-mode-toggle:checked) {
+            --bg-color: #1a1a1a;
+            --text-color: white;
+            --card-bg: #333;
+            --btn-bg: #ff9800;
+            --btn-hover: #ff7600;
+            --btn-text: black;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+        
+        header {
+            background: rgb(185, 185, 255);
+            padding: 15px;
+            text-align: center;
+        }
+        
+
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #logo {
+            height: 50px;
+        }
+
+        .portal-title {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        
+        #dark-mode-toggle {
+            display: none;
+        }
+
+        .toggle-label {
+            cursor: pointer;
+            padding: 8px;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            text-align: center;
+            border-radius: 5px;
+            margin: 15px auto;
+            transition: background 0.3s;
+        }
+
+        .toggle-label:hover {
+            background: var(--btn-hover);
+        }
+
+        
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .slider {
+            display: flex;
+            width: 400%;
+            animation: slide 30s infinite linear; 
+            gap: 20px;
+        }
+
+        .slider img {
+            width: 12.5%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            12.5% { transform: translateX(-12.5%); }
+            25% { transform: translateX(-25%); }
+            37.5% { transform: translateX(-37.5%); }
+            50% { transform: translateX(-50%); }
+            62.5% { transform: translateX(-62.5%); }
+            75% { transform: translateX(-75%); }
+            87.5% { transform: translateX(-87.5%); }
+            100% { transform: translateX(0); }
+        }
+
+        
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 50px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        
+        .thanks {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--card-bg);
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <img id="logo" src="https://www.employeeadda.com/wp-content/uploads/2023/03/iiitr.png" alt="Logo">
+                <h2  class="portal-title" color="white">Welcome! To Student Portal</h2>
+                <div>
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle" class="toggle-label">🌙 Dark Mode</label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://wallpapercave.com/wp/wp2468660.jpg" alt="Slide 1">
+            <img src="https://image.made-in-china.com/2f0j00NeBcwhFsWmoK/Eco-Friendly-Hybrid-Running-Track-for-Stadium-Sports-Flooring-Playground-with-Laaf.jpg" alt="Slide 2">
+            <img src="https://images.indianexpress.com/2018/12/pic2.jpg?w=759" alt="Slide 3">
+            <img src="https://images.mid-day.com/images/images/2022/dec/Robots-a_d.jpg" alt="Slide 4">
+            <img src="https://library.nida.ac.th/wp-content/uploads/2022/09/IMG_8822.jpg" alt="Slide 5">
+            <img src="https://cnr.ncsu.edu/internalresources/wp-content/uploads/sites/11/2021/10/3032-scaled-e1639501786696.jpg" alt="Slide 6">
+            <img src="https://www.siasat.com/wp-content/uploads/2021/12/IIT-Hyderabad.jpg" alt="Slide 7">
+            <img src="https://th.bing.com/th/id/OIP.-7whafOzuLrkJVB7BVo_TwHaEn?w=800&h=498&rs=1&pid=ImgDetMain" alt="Slide 8">
+        </div>
+    </div>
+
+    <main>
+        <section class="card">
+            <h2>Announcements</h2>
+            <p>Check the latest updates and news.</p>
+            <a href="announcements.html" class="btn">View</a>
+        </section>
+
+        <section class="card">
+            <h2>Events</h2>
+            <p>Find out about upcoming university events.</p>
+            <a href="events.html" class="btn">View</a>
+        </section>
+
+        <section class="card">
+            <h2>Timetable</h2>
+            <p>See your batch schedule.</p>
+            <a href="timetable.html" class="btn">View</a>
+        </section>
+
+        <section class="card">
+            <h2>Profile</h2>
+            <p>View and edit your profile details.</p>
+            <a href="profile.html" class="btn">View</a>
+        </section>
+    </main>
+
+    <div class="thanks">
+        <p>Thanks for visiting!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Student Portal | <span class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Use</a> | 
+            <a href="#">Contact Us</a>
+        </span></p>
+    </footer>
+
+</body>
+</html>
